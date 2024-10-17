@@ -1,0 +1,25 @@
+<div class="pb-6">
+  <!-- <label class="block mb-2 text-sm font-medium text-[#111827]">{{
+    label
+  }}</label> -->
+  <div class="relative text-gray-400">
+    <input
+      [formControl]="control"
+      [type]="type"
+      [placeholder]="placeholder"
+      class="text-center mb-2 bg-gray-50 text-gray-600 border focus:border-transparent border-gray-300 sm:text-sm rounded-lg ring ring-transparent focus:ring-1 focus:outline-none focus:ring-gray-400 block w-full p-2.5 rounded-l-lg py-3 px-4"
+    />
+  </div>
+  <!--  -->
+  <div *ngIf="control?.invalid && control?.touched && control?.dirty">
+    <small class="text-red-500" *ngIf="control?.errors?.['required']"
+      >{{ label }} is required.</small
+    >
+    <small class="text-red-500" *ngIf="control?.errors?.['email']"
+      >Invalid email format.</small
+    >
+    <small class="text-red-500" *ngIf="control?.errors?.['minlength']"
+      >Minimum length is 6 characters.</small
+    >
+  </div>
+</div>

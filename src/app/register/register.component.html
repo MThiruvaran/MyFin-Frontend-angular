@@ -1,0 +1,42 @@
+<app-auth-form-container title="Sign Up">
+  <form
+    [formGroup]="registerForm"
+    (ngSubmit)="onSubmit()"
+    class="flex flex-col"
+  >
+    <app-input-field
+      [control]="fullname"
+      type="text"
+      placeholder="Enter your full name"
+      label="Full Name"
+    ></app-input-field>
+    <app-input-field
+      [control]="email"
+      type="text"
+      placeholder="Enter your Email address"
+      label="Email"
+    ></app-input-field>
+    <app-input-field
+      [control]="password"
+      type="password"
+      placeholder="Enter your password"
+      label="Password"
+    ></app-input-field>
+
+    <!-- Submit Button -->
+    <div>
+      <button
+        class="w-full text-[#FFFFFF] bg-[#4F46E5] focus:ring-4 focus:outline-none focus:ring-primary-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center mb-6"
+        type="submit"
+      >
+        Sign Up
+      </button>
+      <div class="text-sm font-light text-[#000000] text-center">
+        Already have an account?
+        <a href="/login" class="font-medium text-[#4F46E5] hover:underline"
+          >Sign In</a
+        >
+      </div>
+    </div>
+  </form>
+</app-auth-form-container>

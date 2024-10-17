@@ -1,0 +1,48 @@
+<nav class="bg-[#1F3A93] p-4">
+  <div class="container mx-auto flex justify-between items-center">
+    <!-- Company Name -->
+    <div class="text-white font-bold text-lg">
+      <a routerLink="/" class="hover:text-[#5D9CEC]">CompanyName</a>
+    </div>
+
+    <!-- Navigation Links -->
+    <div class="flex space-x-4">
+      <a
+        routerLink="/home"
+        routerLinkActive="text-[#5D9CEC]"
+        class="text-white hover:text-[#5D9CEC]"
+        >Home</a
+      >
+      <a
+        routerLink="/transactions"
+        routerLinkActive="text-[#5D9CEC]"
+        class="text-white hover:text-[#5D9CEC]"
+        >Transactions</a
+      >
+      <a
+        routerLink="/loan"
+        routerLinkActive="text-[#5D9CEC]"
+        class="text-white hover:text-[#5D9CEC]"
+        >Loan</a
+      >
+      <a
+        routerLink="/accounts"
+        routerLinkActive="text-[#5D9CEC]"
+        class="text-white hover:text-[#5D9CEC]"
+        >Accounts</a
+      >
+    </div>
+
+    <!-- Logout Button -->
+    <div>
+      <button
+        (click)="onLogout()"
+        class="bg-[#1F3A93] text-white px-4 py-2 rounded hover:bg-[#5D9CEC] border-white"
+      >
+        Logout
+      </button>
+    </div>
+  </div>
+</nav>
+
+<!-- <router-outlet></router-outlet> -->
